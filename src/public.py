@@ -10,7 +10,7 @@ from flask import Blueprint, request
 import os
 import json
 from pprint import pprint
-import requests
+
 public_1 = Blueprint('public_1', __name__, url_prefix="/api/v1/data/public_1")
 
 
@@ -27,8 +27,6 @@ def handle_public_1():
     page = request.args.get('page', 1, type=int)
     per_page = request.args.get('per_page', 5, type=int)
 
-    # bookmarks = Bookmark.query.filter_by(
-    #     user_id=current_user).paginate(page=page, per_page=per_page)
     with db_engine.connect() as conn:
         db_engine.execute("USE basdata")
         result = db_engine.execute(f"select * from basdata.{query_table} where zuhubh = {current_zuhubh}")
@@ -36,5 +34,3 @@ def handle_public_1():
     result_ult = jsonify({'result': [dict(row) for row in result]})
 
     return result_ult, HTTP_200_OK
-
-

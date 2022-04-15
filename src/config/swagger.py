@@ -1,15 +1,15 @@
 template = {
-    "swagger": "2.0",
+    "swagger": "1.0",
     "info": {
-        "title": "Bookmarks API",
-        "description": "API for bookmarks",
+        "title": "DW SERVICE API",
+        "description": "API for DW",
         "contact": {
             "responsibleOrganization": "",
             "responsibleDeveloper": "",
-            "email": "deve@gmail.com",
-            "url": "www.twitter.com/deve",
+            "email": "hello@gmail.com",
+            "url": "www.bank.com",
         },
-        "termsOfService": "www.twitter.com/deve",
+        "termsOfService": "www.bank.com",
         "version": "1.0"
     },
     "basePath": "/api/v1",  # base bash for blueprint registration
