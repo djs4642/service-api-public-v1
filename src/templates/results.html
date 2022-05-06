@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}查询{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <h3>选择保存</h3>
+    <div> {{ output }} </div>
+    <form method="post">
+        <input type="submit" value="保存为excel文件" name="save_excel"/>
+        <input type="submit" value="保存为json文件" name="save_json"/>
+        <input type="submit" value="保存为csv文件" name="save_csv"/>
+    </form>
+{% endblock %}
